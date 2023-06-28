@@ -1,0 +1,36 @@
+@import '../../utils/_variables';
+
+.content {
+  background: $whiteColor;
+  box-shadow: 0px 10px 60px $boxShadow;
+  border-radius: 30px;
+  height: 100%;
+  padding: 10px 40px 0 40px;
+  position: relative;
+  .top_information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .information_status {
+      &.active {
+        color: $activeColor;
+      }
+    }
+  }
+  .title_h3 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    letter-spacing: -0.01em;
+    color: $blackColor;
+    margin-bottom: 7px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .content {
+    padding: 10px 25px 0 25px;
+  }
+}

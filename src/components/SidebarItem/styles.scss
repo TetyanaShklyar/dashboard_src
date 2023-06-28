@@ -1,0 +1,85 @@
+@import '../../utils/_variables';
+
+.nav-link {
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: all 0s;
+  height: 46px;
+  padding: 11px;
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url(../../../public/images/sprite.svg);
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+  }
+  &.dashboard::before {
+    background-position: 0 0;
+  }
+  &.product::before {
+    background-position: 0 -25px;
+  }
+  &.customers::before {
+    background-position: 0 -51px;
+  }
+  &.income::before {
+    background-position: 0 -75px;
+  }
+  &.promote::before {
+    background-position: 0 -98px;
+  }
+  &.help::before {
+    background-position: 0 -121px;
+  }
+
+  &.active,
+  &:hover {
+    background-color: $mainColorActive;
+    &::before {
+      background-position-x: -24px;
+    }
+    span {
+      color: $whiteColor;
+    }
+    &::after {
+      background-position: -55px -22px;
+    }
+  }
+
+  span {
+    color: $navLinkColor;
+    padding-left: 38px;
+    text-transform: capitalize;
+  }
+}
+.collapse-item .nav-link {
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url(../../../public/images/sprite.svg);
+    background-repeat: no-repeat;
+    background-position: -55px -2px;
+    width: 16px;
+    height: 16px;
+    right: 8px;
+  }
+
+  &[aria-expanded='true']::after {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+  }
+}
+
+.nav-collapse .nav-link {
+  height: 30px;
+  &::before,
+  &::after {
+    content: none;
+  }
+  span {
+    font-size: 12px;
+  }
+}

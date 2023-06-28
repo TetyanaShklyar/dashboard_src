@@ -1,0 +1,55 @@
+@import '../../utils/_variables';
+
+.table_list {
+  margin-top: 25px;
+  .table {
+    table-layout: unset;
+    overflow-y: hidden;
+    margin-bottom: 0;
+    .line {
+      .line_td__span {
+        background-color: $tableBorderColor;
+        position: absolute;
+        margin: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        width: 100%;
+      }
+    }
+    thead {
+      tr {
+        height: auto;
+      }
+      th {
+        font-weight: 500;
+        color: $tableTheadColor;
+      }
+    }
+    tbody {
+      tr {
+        border-bottom: 1px solid $tableBorderColor;
+      }
+    }
+    tr {
+      height: 69px;
+      vertical-align: middle;
+      th,
+      td {
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 3px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .table > :not(caption) > * > * {
+    background-color: $whiteColor;
+    border-bottom-width: 0;
+    box-shadow: none;
+    padding: 14px;
+  }
+}

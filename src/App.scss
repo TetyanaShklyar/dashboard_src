@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import './utils/_variables';
+
+button,
+input {
+  outline: none;
+  box-shadow: none;
+}
+
+.app {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.01em;
+  background: $backgroundColorApp;
+  display: grid;
+  grid-template-columns: 306px 1fr;
+  overflow-y: hidden;
+}
+
+@media (max-width: 991.98px) {
+  .app {
+    display: block;
+  }
+}

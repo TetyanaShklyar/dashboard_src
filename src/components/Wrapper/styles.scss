@@ -1,0 +1,33 @@
+@import '../../utils/_variables';
+
+.wrapper {
+  padding: 42px 95px 41px 72px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  .title_h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 0;
+    padding-bottom: 50px;
+    color: $blackColor;
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .wrapper {
+    margin-top: 70px;
+    padding: 25px;
+
+    .title_h2 {
+      padding-bottom: 20px;
+    }
+  }
+}

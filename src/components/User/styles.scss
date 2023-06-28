@@ -1,0 +1,45 @@
+@import '../../utils/_variables';
+.user {
+  display: flex;
+  align-items: center;
+  padding-left: 28px;
+  margin-bottom: 76px;
+
+  .user_photo {
+    width: 42px;
+    height: 42px;
+    border-radius: 100%;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      width: 42px;
+      height: 42px;
+      border-radius: 100%;
+    }
+  }
+  .user_description {
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    .user_description__name,
+    .user_description__position {
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      color: $blackColor;
+      margin-bottom: 0;
+    }
+    .user_description__position {
+      color: $greyColor;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .user {
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+}
